@@ -19,6 +19,14 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    position: relative;
+}
+
+.message {
+    display: block;
+    position: absolute;
+    top: 0;
+    padding: 2rem
 }
 
 .container {
