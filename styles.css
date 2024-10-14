@@ -2,9 +2,9 @@
     box-sizing: border-box;
 }
 :root {
-    --bright: aqua;
-    --dark: rgb(0, 100, 100);
-    --darker: rgb(0, 50, 50);
+    --bright: red;
+    --dark: rgb(100, 0, 0);
+    --darker: rgb(50, 0, 0);
 }
 
 body {

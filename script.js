@@ -1,5 +1,5 @@
 "use strict";
-let color = 'blue';
+let color = 'red';
 
 const cards = document.querySelectorAll(".card");
 const container = document.querySelector(".container");
@@ -35,7 +35,22 @@ cards.forEach(card => {
       document.documentElement.style.setProperty('--dark', 'rgb(100, 0, 0');
       document.documentElement.style.setProperty('--darker', 'rgb(50, 0, 0');
       color = 'red'
-    } else {
+    } else if(color == 'red') {
+      document.documentElement.style.setProperty('--bright', 'orange');
+      document.documentElement.style.setProperty('--dark', 'rgb(100, 64, 0)');
+      document.documentElement.style.setProperty('--darker', 'rgb(50, 32, 0)');
+      color = 'orange'
+    } else if(color == 'orange') {
+      document.documentElement.style.setProperty('--bright', 'yellow');
+      document.documentElement.style.setProperty('--dark', 'rgb(100, 100, 0)');
+      document.documentElement.style.setProperty('--darker', 'rgb(50, 50, 0)');
+      color = 'yellow'
+    } else if(color == 'yellow') {
+      document.documentElement.style.setProperty('--bright', 'rgb(0, 255, 0)');
+      document.documentElement.style.setProperty('--dark', 'rgb(0, 100, 0)');
+      document.documentElement.style.setProperty('--darker', 'rgb(0, 50, 0)');
+      color = 'green'
+    } else if(color == 'green') {
       document.documentElement.style.setProperty('--bright', 'aqua');
       document.documentElement.style.setProperty('--dark', 'rgb(0, 100, 100');
       document.documentElement.style.setProperty('--darker', 'rgb(0, 50, 50');
