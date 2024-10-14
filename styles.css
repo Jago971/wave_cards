@@ -1,6 +1,12 @@
 * {
     box-sizing: border-box;
 }
+:root {
+    --bright: aqua;
+    --dark: rgb(0, 100, 100);
+    --darker: rgb(0, 50, 50);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -35,26 +41,27 @@ body {
 
 .card:hover {
     transform: translateZ(100px);
-    background-color: aqua;
+    background-color: var(--bright);
+    cursor: pointer;
 }
 
 .card:hover + * {
-    background-color: rgb(0, 100, 100);
+    background-color: var(--dark);
     transform: translateZ(75px) rotateY(20deg);
 }
 
 .card:hover + * + * {
-    background-color: rgb(0, 50, 50);
+    background-color: var(--darker);
     transform: translateZ(25px) rotateY(10deg);
 }
 
 .card:has(+ .card:hover) {
-    background-color: rgb(0, 100, 100);
+    background-color: var(--dark);
     transform: translateZ(75px) rotateY(-20deg);
 }
 
 .card:has(+ * + .card:hover) {
-    background-color: rgb(0, 50, 50);
+    background-color: var(--darker);
     transform: translateZ(25px) rotateY(-10deg);
 }
 
@@ -84,15 +91,15 @@ body {
 
 @keyframes wave {
     0% {
-        background-color: aqua;
+        background-color: var(--bright);
         transform: translateZ(100px);
     }
     14.3% {
-        background-color: rgb(0, 100, 100);
+        background-color: var(--dark);
         transform: translateZ(75px) rotateY(-20deg);
     }
     28.6% {
-        background-color: rgb(0, 50, 50);
+        background-color: var(--darker);
         transform: translateZ(25px) rotateY(-10deg);
     }
     42.9% {
@@ -104,15 +111,15 @@ body {
         transform: translateZ(0) rotateY(0);
     }
     71.5% {
-        background-color: rgb(0, 50, 50);
+        background-color: var(--darker);
         transform: translateZ(25px) rotateY(10deg);
     }
     85.8% {
-        background-color: rgb(0, 100, 100);
+        background-color: var(--dark);
         transform: translateZ(75px) rotateY(20deg);
     }
     100% {
-        background-color: aqua;
+        background-color: var(--bright);
         transform: translateZ(100px);
     }
 }
